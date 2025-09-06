@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import os
-import system
+import sys
 import asyncio
 import aiohttp
 import fade
